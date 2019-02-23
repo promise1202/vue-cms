@@ -1,9 +1,11 @@
 <template>
     <div class="container">
-       <mt-header fixed title="固定在顶部"></mt-header>
-        <h1>2222</h1>
-       <nav class="mui-bar mui-bar-tab">
-			<router-link class="mui-tab-item mui-active" to="/home">
+        <mt-header fixed title="固定在顶部"></mt-header>
+        <transition>
+            <router-view></router-view>
+        </transition>
+        <nav class="mui-bar mui-bar-tab">
+			<router-link class="mui-tab-item" to="/home">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
 			</router-link>
