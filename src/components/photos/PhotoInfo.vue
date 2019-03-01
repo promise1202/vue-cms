@@ -59,7 +59,7 @@ export default {
 <style lang="scss">
 .photoinfo{
     padding: 4px;
-    h3{
+    >h3{
         color: #26a2ff;
         font-size: 15px;
         text-align: center;
@@ -83,6 +83,7 @@ export default {
                 box-shadow:0 0 10px #999;
                 img{
                     width: 100px;
+                    vertical-align: middle;
                 }
             }
         }

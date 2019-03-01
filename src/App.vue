@@ -1,6 +1,10 @@
 <template>
     <div class="container">
-        <mt-header fixed title="黑马商城"></mt-header>
+        <mt-header fixed title="黑马商城">
+            <span slot="left" @click="$router.go(-1)"  v-show="this.$route.path!='/home'">
+                <mt-button icon="back">返回</mt-button>
+            </span>
+        </mt-header>
         <transition>
             <router-view></router-view>
         </transition>
@@ -14,7 +18,7 @@
 				<span class="mui-tab-label">会员</span>
 			</router-link>
 			<router-link class="mui-tab-item-zs" to="/shopcar">
-				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">0</span></span>
+				<span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge" id="badge">{{$store.getters.getAllCount}}</span></span>
 				<span class="mui-tab-label">购物车</span>
 			</router-link>
 			<router-link class="mui-tab-item-zs" to="/search">
@@ -26,7 +30,6 @@
 </template>
 <script>
 export default {
-
 }
 </script>
 <style lang="scss" scoped>
